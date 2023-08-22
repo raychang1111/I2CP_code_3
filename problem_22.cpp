@@ -1,7 +1,5 @@
-// https://www.luogu.com.cn/problem/P1149
+// https://www.luogu.com.cn/record/122308542
 #include <bits/stdc++.h>
-#define int long long 
-#define endl '\n'
 using namespace std;
 set<vector<int>> ans;
 int count(int l,int r,vector<int> &arr){
@@ -14,20 +12,18 @@ int count(int l,int r,vector<int> &arr){
 }
 void dfs(int n,vector<int> &path,vector<int> &number){
     if(n==0){
-        vector<int> arr=path;
-        sort(arr.begin(),arr.end());
-        do{
-            for(int i=0;i<arr.size()-2;i++){
-                for(int j=i+1;j<arr.size()-1;j++){
-                    int a=count(0,i,arr);
-                    int b=count(i+1,j,arr);
-                    int c=count(j+1,arr.size()-1,arr);
-                    if(a+b==c){
-                        ans.insert({a,b,c});
-                    }
+        for(int i=0;i<path.size()-2;i++){
+            for(int j=i+1;j<path.size()-1;j++){
+                if(path[0]==0 && i!=0 || path[i+1]==0 && j!=i+1 || path[j+1]==0 && j+1!=path.size()-1)
+                    continue;
+                int a=count(0,i,path);
+                int b=count(i+1,j,path);
+                int c=count(j+1,path.size()-1,path);
+                if(a+b==c){
+                    ans.insert({a,b,c});
                 }
             }
-        }while(next_permutation(arr.begin(),arr.end()));
+        }
         return ;
     }
     for(int i=0;i<number.size();i++){
@@ -38,9 +34,7 @@ void dfs(int n,vector<int> &path,vector<int> &number){
         path.pop_back();
     }
 }
-signed main(){
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
+int main(){
     int n;
     vector<int> number={6,2,5,5,4,5,6,3,7,6};
     vector<int> path;
