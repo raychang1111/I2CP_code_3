@@ -1,4 +1,4 @@
-// https://www.luogu.com.cn/problem/P5937
+// https://www.luogu.com.cn/problem/P5937       
 #include <bits/stdc++.h>                //前墜和 種類併查集 離散化
 #define endl '\n'
 using namespace std;
