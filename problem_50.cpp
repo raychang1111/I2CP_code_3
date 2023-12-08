@@ -103,7 +103,7 @@ signed main(){
                 link[b].push_back(a);
             }
         }
-        sort(BFS_order.begin(),BFS_order.end(),cmp);
+        sort(BFS_order.begin(),BFS_order.end(),cmp);            //???????????? ?????
         for(int i=0;i<BFS_order.size();i++)
             ans+=BFS(BFS_order[i],link,property);
         cout<<ans<<endl;
