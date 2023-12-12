@@ -1,2 +1,2 @@
-    // for(int i=0;i<w_prev.size();i++)
-    //     cout<<w_prev[i]<<' ';
+    ios::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
