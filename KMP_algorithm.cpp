@@ -44,9 +44,9 @@ int main(){
     cin>>s>>w;
     vector<int> w_prev(w.size());
     kmp_init(w,w_prev);
-    for(int i=0;i<w_prev.size();i++)
-        cout<<w_prev[i]<<' ';
-    cout<<endl;
+    // for(int i=0;i<w_prev.size();i++)
+    //     cout<<w_prev[i]<<' ';
+    // cout<<endl;
     cout<<KMP(s,w,w_prev)<<endl;
     return 0;
 }

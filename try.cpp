@@ -47,7 +47,7 @@ int B_S(vector<int> &index,int val){
     }
     return res;
 }
-int main(){
+void main_1(){
     ios::sync_with_stdio(false);
     cin.tie(0);cout.tie(0);
     int n,m,x;
@@ -73,5 +73,11 @@ int main(){
         }
         cout<<(m==0? '\n':' ');
     }
+    // return 0;
+}
+int main(){
+    vector<vector<int>> a;
+    a.push_back({1});
+    cout<<a[0][0]<<endl;
     return 0;
 }

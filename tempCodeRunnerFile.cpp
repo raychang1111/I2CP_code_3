@@ -1,2 +1,1 @@
-    ios::sync_with_stdio(false);
-    cin.tie(0);cout.tie(0);
+    cout<<l<<' '<<r<<' '<<m<<' '<<k<<endl;
