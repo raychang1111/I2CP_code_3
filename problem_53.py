@@ -1,4 +1,4 @@
-#  https://www.luogu.com.cn/problem/P1080           ¤j¼Æ
+#  https://www.luogu.com.cn/problem/P1080           å¤§æ•¸
 from functools import cmp_to_key
 def cmp(a):
     return a[0]*a[1]
