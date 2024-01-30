@@ -1,4 +1,4 @@
-// https://www.luogu.com.cn/problem/P1080       //大數  待處理  未完
+// https://www.luogu.com.cn/problem/P1080       //大數  待處理  未完 貪心(策略是對的)
 #include <bits/stdc++.h>
 #define int long long
 #define endl '\n'

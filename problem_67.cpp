@@ -10,7 +10,7 @@ int main(){
     int n,temp;
     cin>>n;
     vector<pair<double,double>> point(n);
-    vector<vector<vector<double>>> dp(n,vector<vector<double>>(1<<n,vector<double>(n,1e6)));   //dp[i][j][k] 已連接i個點 狀態為j(有哪些點) 第k個點結尾
+    vector<vector<vector<double>>> dp(n,vector<vector<double>>(1<<n,vector<double>(n,1e6)));   //dp[i][j][k] 已連接i個點 狀態為j(有哪些點) 第k個點結尾 的最小遍歷距離
     vector<vector<int>> state(n);
     for(int i=0;i<n;i++)
         cin>>point[i].first>>point[i].second;
