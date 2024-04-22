@@ -1,0 +1,1 @@
+{"name":"Local: problem_122","url":"c:\\Users\\Ray\\Documents\\I2CP_code_3\\problem_122.cpp","tests":[{"id":1713523723470,"input":"1315","output":"2(2(2+2(0))+2)+2(2(2+2(0)))+2(2(2)+2(0))+2+2(0)"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Ray\\Documents\\I2CP_code_3\\problem_122.cpp","group":"local","local":true}

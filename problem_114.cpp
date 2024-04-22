@@ -42,3 +42,59 @@ signed main(){
     }
     return 0;
 }
+/* -----------SPFA--------------------------------
+#include <bits/stdc++.h>
+#define int long long
+using namespace std;
+signed main(){
+    ios::sync_with_stdio(false);
+    cin.tie(0);cout.tie(0);
+    int t,n,m,u,v,w;
+    cin>>t;
+    while(t--){
+        bool ans=false;
+        cin>>n>>m;
+        vector<vector<pair<int,int>>> link(n);
+        while(m--){
+            cin>>u>>v>>w;
+            u--;
+            v--;
+            if(w>=0)
+                link[v].push_back({u,w});        
+            link[u].push_back({v,w});
+        }
+        vector<int> date(n,-1);
+        vector<int> dis(n,INT_MAX);
+        queue<int> Q;
+        vector<bool> in_Q(n,false);
+        date[0]=0;
+        dis[0]=0;
+        Q.push(0);
+        in_Q[0]=true;
+        while(!Q.empty()){
+            int node=Q.front();
+            Q.pop();
+            in_Q[node]=false;
+            if(date[node]>n){
+                ans=true;
+                break;
+            }
+            for(int i=0;i<link[node].size();i++){
+                if(dis[link[node][i].first]>dis[node]+link[node][i].second){
+                    dis[link[node][i].first]=dis[node]+link[node][i].second;
+                    date[link[node][i].first]=date[node]+1;
+                    if(!in_Q[link[node][i].first]){
+                        in_Q[link[node][i].first]=true;
+                        Q.push(link[node][i].first);
+                    }
+                }
+            }
+        }
+        if(ans)
+            cout<<"YES\n";
+        else
+            cout<<"NO\n";
+    }
+    return 0;
+}
+//------------------------------------------------*/
